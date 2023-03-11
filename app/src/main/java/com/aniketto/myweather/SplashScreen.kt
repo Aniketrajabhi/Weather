@@ -21,12 +21,11 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
-import java.security.Permission
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {
-    lateinit var mfusedLocation: FusedLocationProviderClient
-    private var MyRequest = 1010
+    private lateinit var mfusedLocation: FusedLocationProviderClient
+    private var MyRequest = 10
     @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +41,7 @@ class SplashScreen : AppCompatActivity() {
         if (CheckPermission()) {
             if (LocationEnable()) {
                 mfusedLocation.lastLocation.addOnCompleteListener { task ->
-                    var location: Location? = task.result
+                    val location: Location? = task.result
                     if (location == null) {
                         NewLocation()
                     } else {
@@ -106,6 +105,5 @@ class SplashScreen : AppCompatActivity() {
             getLastLocation()
         }
     }
-
     }
 }

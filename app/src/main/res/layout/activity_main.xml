@@ -184,7 +184,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Hummidity"
+                            android:text="Humidity"
                             android:textColor="@color/black"
                             android:textSize="16sp"/>
                     </LinearLayout>
@@ -229,7 +229,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
                         android:layout_marginLeft="20dp"
                         android:text="Degree:-"/>
                 </LinearLayout>
